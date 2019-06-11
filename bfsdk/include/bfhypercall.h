@@ -66,6 +66,7 @@ uint64_t _vmcall(uint64_t r1, uint64_t r2, uint64_t r3, uint64_t r4) NOEXCEPT;
 #define __enum_domain_op 2
 #define __enum_vcpu_op 3
 #define __enum_uart_op 4
+#define __enum_vmi_op 5
 
 #define bfopcode(a) ((a & 0x00FF000000000000) >> 48)
 

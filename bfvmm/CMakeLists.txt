@@ -51,6 +51,7 @@ target_link_libraries(boxy_vmm PRIVATE boxy_bfvmm)
 # -----------------------------------------------------------------------------
 
 install(DIRECTORY include/ DESTINATION include/boxy)
+install(DIRECTORY ../bfsdk/include/ DESTINATION include/)
 install(TARGETS boxy_vmm DESTINATION bin EXPORT boxy-vmm-targets)
 
 fini_project()
