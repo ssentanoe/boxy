@@ -154,6 +154,7 @@ enumeraton logic needed when detecting the present of Boxy.
 To compile with default settings for your host environment, run the following commands:
 
 ```
+apt install bc texinfo
 git clone --recursive https://github.com/Bareflank/boxy.git
 mkdir boxy/build; cd boxy/build
 cmake ../hypervisor
