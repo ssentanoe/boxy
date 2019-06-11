@@ -19,6 +19,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+set(ENABLE_VMI ON)
+
 set(CACHE_DIR ${CMAKE_CURRENT_LIST_DIR}/cache)
 file(MAKE_DIRECTORY ${CACHE_DIR})
 
@@ -29,3 +31,9 @@ set_bfm_vmm(boxy_vmm)
 list(APPEND EXTENSION
     ${CMAKE_CURRENT_LIST_DIR}
 )
+if(ENABLE_VMI)
+	set_bfm_vmm(boxy_libvmi_extension TARGET bfvmm)
+	list(APPEND EXTENSION
+		/root/boxy_libvmi_extension/libvmi_extension/
+	)
+endif()
